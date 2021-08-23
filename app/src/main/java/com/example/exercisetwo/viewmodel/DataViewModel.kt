@@ -12,8 +12,8 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
     @SuppressLint("StaticFieldLeak")
     private val context = getApplication<Application>().applicationContext
 
-    fun getDataList(): MutableLiveData<ModelClass>{
+    fun getDataList(): MutableLiveData<ModelClass> {
         val myRepo = Repository()
-        return  myRepo.generateDataList(context)
+        return myRepo.generateDataList(context)
     }
 }

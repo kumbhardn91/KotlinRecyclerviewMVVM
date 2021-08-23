@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:fullBackupContent="false"
         android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.ExerciseOne">
+        android:theme="@style/Theme.ExerciseTwo">
         <activity
             android:name="com.example.exercisetwo.MainActivity"
             android:exported="true">

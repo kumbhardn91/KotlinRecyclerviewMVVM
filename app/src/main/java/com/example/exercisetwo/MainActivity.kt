@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         manager = LinearLayoutManager(this)
 
-        dataViewModel.getDataList().observe(this,{
+        dataViewModel.getDataList().observe(this, {
             if (it != null) {
                 val dataList = it.rows
                 dataList.let {
