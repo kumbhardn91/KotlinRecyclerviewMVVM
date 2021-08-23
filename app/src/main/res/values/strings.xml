@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExerciseTwo</string>
+    <string name="todo">TODO</string>
+    <string name="fetch_data_error">Error in fetching data</string>
 </resources>
