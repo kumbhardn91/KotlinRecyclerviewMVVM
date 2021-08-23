@@ -1,8 +1,9 @@
-package com.example.exercisetwo
+package com.example.exercisetwo.utils
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.example.exercisetwo.R
 
 @BindingAdapter("image")
 fun loadImage(imageView: ImageView, imgUrl: String?) {

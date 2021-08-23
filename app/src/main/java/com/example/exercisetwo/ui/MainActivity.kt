@@ -1,10 +1,11 @@
-package com.example.exercisetwo
+package com.example.exercisetwo.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.exercisetwo.R
 import com.example.exercisetwo.adapter.DataAdapter
 import com.example.exercisetwo.databinding.ActivityMainBinding
 import com.example.exercisetwo.utils.showToast
@@ -22,10 +23,14 @@ class MainActivity : AppCompatActivity() {
         dataViewModel = ViewModelProvider(this).get(DataViewModel::class.java)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         manager = LinearLayoutManager(this)
+        observeData()
 
-        dataViewModel.getDataList().observe(this, {
+    }
+
+    private fun observeData() {
+
+        dataViewModel.dataResultList.observe(this, {
             if (it != null) {
                 val dataList = it.rows
                 dataList.let {
@@ -38,6 +43,6 @@ class MainActivity : AppCompatActivity() {
                 showToast(this, getString(R.string.fetch_data_error))
             }
         })
-
+        dataViewModel.getDataList()
     }
 }
